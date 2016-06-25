@@ -1,0 +1,32 @@
+<ion-view>
+
+
+  <ion-nav-bar>
+    <ion-nav-title>
+      Rasberry PI
+    </ion-nav-title>
+  </ion-nav-bar>
+
+  <ion-content>
+<!-- {{data.}}({{data.Date}}) -->
+    <div class="list">
+      <div class="item item-avatar-left item-icon-right" ng-click="btnDetail(data)" ng-repeat="data in myDataArray">
+
+        <img src="img/pi_logo.png">
+        <h2>{{data.path
+
+
+
+        }}   <!--{{data.path.substr(0, data.path.search(".json")).toUpperCase()}} -->
+
+        
+        </h2>
+        <h2></h2>
+
+        <i> <class="icon ion-chevron-right"></i>
+
+      </div>
+
+  </ion-content>
+
+</ion-view>

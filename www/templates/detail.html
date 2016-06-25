@@ -1,0 +1,102 @@
+<ion-view>
+  <ion-nav-bar>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <ion-nav-title>
+    Detail
+  </ion-nav-title>
+
+    <ion-nav-buttons side="left">
+      <button class="button-icon ion-chevron-left" ng-click="btnBack()">Back</button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+  <ion-content>
+    <img src="img/pi_model.png" style="margin-left: auto;margin-right: auto;display: block; padding:2em;">
+    <div class="list list-inset card">
+      <div class = "item item-divider">Basic</div>
+      <div class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        Name : {{data.basic.hostname}}
+      </div>
+ 
+      <div class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        Date : {{data.basic.date}}
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-information-circled"></i>
+        Distro : {{data.basic.distro_name}}
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-information-circled"></i>
+        Kernel version : {{data.basic.kernel_version}}
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-information-circled"></i>
+        Machine : {{data.basic.machine}}
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-iphone"></i>
+        {{data.basic.temperature}} 
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-information-circled"></i>
+        Voltage : {{data.basic.voltage}}
+      </div>
+
+
+
+      <div class = "item item-divider">Network</div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        IP : {{data.network.eth0.ip}} 
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        IP loopback : {{data.network.eth0.ip_loopback}} 
+      </div>
+
+        <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        Broadcost : {{data.network.eth0.bcast}} 
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        Subnetmask: {{data.network.eth0.sub}}
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        MAC : {{data.network.eth0.mac}} 
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        RX packet : {{data.network.eth0.rx_packet}} 
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        TX packet {{data.network.eth0.tx_packet}}
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        RX bytes : {{data.network.eth0.rx_bytes}} 
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-earth"></i>
+        TX bytes: {{data.network.eth0.tx_bytes}}
+      </div>
+
+    </div>
+      <div class="container">RAM
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            70%
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="button button-full" ng-click="btnCall()">OK</button>
+  </ion-content>
+</ion-view>

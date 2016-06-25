@@ -1,0 +1,22 @@
+<?
+include('../lib/con_db.php');
+
+$sql = "SELECT * FROM tb_contact ORDER BY id DESC";
+$resource = mysql_query($sql);
+$count_row = mysql_num_rows($resource);
+
+if($count_row > 0) {
+	while($result = mysql_fetch_assoc($resource)){
+		$rows[]=$result;
+	}
+
+	$data = json_encode($rows);
+	$totaldata = sizeof($rows);
+	$results = '{"results":'.$data.'}';
+
+}else{
+	$results = '{"results":null}';
+}
+
+echo $results;
+?>
